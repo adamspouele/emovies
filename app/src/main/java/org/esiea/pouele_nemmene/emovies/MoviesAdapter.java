@@ -48,17 +48,6 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieHolde
             this.genre = itemView.findViewById(R.id.movie_rv_element_genre);
             this.poster = itemView.findViewById(R.id.movie_rv_element_poster);
             this.detailsBtn = itemView.findViewById(R.id.show_btn);
-
-            /*Button detailsBtn = (Button) itemView.findViewById(R.id.show_btn) ;
-
-            detailsBtn.setOnClickListener(new View.OnClickListener()
-            {
-                public void onClick(View v)
-                {
-                    Intent i = new Intent(ContextProvider.getContext(), DetailsActivity.class);
-                    ContextProvider.getContext().startActivity(i);
-                }
-            });*/
         }
     }
 

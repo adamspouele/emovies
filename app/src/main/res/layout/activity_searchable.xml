@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkgray2"
+    tools:context="org.esiea.pouele_nemmene.emovies.SearchableActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="493dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+        <SearchView
+            android:id="@+id/search_movie"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/grey"
+            android:clickable="true"
+            android:layout_weight="1">
+
+        </SearchView>
+        <ListView
+            android:id="@+id/list_results"
+            android:layout_width="299dp"
+            android:layout_height="0dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="110dp"
+            android:layout_weight="10"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_result"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

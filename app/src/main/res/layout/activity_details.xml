@@ -7,94 +7,147 @@
     android:background="@color/darkgray2"
     tools:context="org.esiea.pouele_nemmene.emovies.DetailsActivity">
 
-    <android.support.v4.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                tools:layout_editor_absoluteY="8dp"
+                tools:layout_editor_absoluteX="8dp">
+
+                <ImageView
+                    android:id="@+id/movie_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/movie_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
+                        android:text="TITLE" />
+
+                    <TextView
+                        android:id="@+id/movie_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                        android:text="Année" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/darkgray">
+                    <TextView
+                        android:id="@+id/movie_genre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Genre"
+                        android:padding="10dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/orange"/>
+
+                    <TextView
+                        android:id="@+id/movie_duration"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:gravity="right"
+                        android:text="Durée" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/movie_resume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/darkgray"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:textSize="15dp"
+                    android:padding="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="LOREMP IPSUM LOREMP IPSUM LOREMP IPSUM LOREMP IPSUM LOREMP IPSUM LOREMP IPSUM LOREMP IPSUM v LOREMP IPSUMLOREMP IPSUMLOREMP IPSUMLOREMP IPSUMvv"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/search_more"
+                    android:background="@color/red"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/search_more" />
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="10dp"
-            tools:layout_editor_absoluteY="8dp"
-            tools:layout_editor_absoluteX="8dp">
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:background="@color/black_overlay"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="488dp">
 
-            <ImageView
-                android:id="@+id/movie_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_launcher"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/movie_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="20dp"
-                    android:layout_weight="1"
-                    android:text="TITLE" />
-
-                <TextView
-                    android:id="@+id/movie_year"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="20dp"
-                    android:padding="10dp"
-                    android:gravity="right"
-                    android:layout_weight="1"
-                    android:text="Année" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/darkgray">
-                <TextView
-                    android:id="@+id/movie_genre"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Genre"
-                    android:padding="10dp"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:layout_weight="1"
-                    android:textColor="@color/orange"/>
-
-                <TextView
-                    android:id="@+id/movie_duration"
-                    android:padding="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="20dp"
-                    android:gravity="right"
-                    android:layout_weight="1"
-                    android:text="Durée" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/movie_resume"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/darkgray"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:textSize="15dp"
-                android:justificationMode="inter_word"
-                android:text="LOREMP IPSUM LOREMP IPSUM LOREMP IPSUM LOREMP IPSUM LOREMP IPSUM LOREMP IPSUM LOREMP IPSUM v LOREMP IPSUMLOREMP IPSUMLOREMP IPSUMLOREMP IPSUMvv"
+            <Button
+                android:id="@+id/seasons_btn"
+                android:background="@color/black"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/seasons"
+                android:layout_weight="1"
+                android:gravity="center"/>
 
+            <Button
+                android:id="@+id/episodes_btn"
+                android:background="@color/red"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/episodes" />
         </LinearLayout>
-
-
-    </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

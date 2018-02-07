@@ -7,10 +7,4 @@
         android:title="@string/search_title"
         android:elevation="4dp"
         app:showAsAction="ifRoom"/>
-
-    <!-- Settings, should always be in the overflow -->
-    <item android:id="@+id/action_settings"
-        android:title="@string/settings"
-        android:elevation="4dp"
-        app:showAsAction="never"/>
 </menu>

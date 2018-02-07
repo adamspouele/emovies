@@ -64,7 +64,7 @@
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Détails" />
+            android:text="@string/moreBtn" />
 
     </LinearLayout>
 </RelativeLayout>

@@ -1,5 +1,7 @@
 package org.esiea.pouele_nemmene.emovies;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.support.v4.content.LocalBroadcastManager;
@@ -7,8 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -54,18 +58,14 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_search:
                 // User chose the "Settings" item, show the app settings UI...
-                return true;
-
-            case R.id.action_settings:
-                // User chose the "Favorite" action, mark the current item
-                // as a favorite...
+                Intent intent = new Intent(ContextProvider.getContext(), SearchableActivity.class);
+                ContextProvider.getCurrentActivity().startActivity(intent);
                 return true;
 
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
                 return super.onOptionsItemSelected(item);
-
         }
     }
 
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.emovies_menu, menu);
+
         return true;
     }
 }
